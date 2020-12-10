@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/sgtcaze/NametagEdit.svg?branch=master)](https://travis-ci.org/sgtcaze/NametagEdit)
 [![Dev Builds](https://img.shields.io/badge/Jenkins-Development%20Builds-lightgrey.svg)](http://ci.nametagedit.com/job/NametagEdit/)
-[![Support](https://img.shields.io/badge/Minecraft-1.7--1.15-green.svg)](documentation/Support)
+[![Support](https://img.shields.io/badge/Minecraft-1.7--1.16.4-green.svg)](documentation/Support)
 [![Spigot](https://img.shields.io/badge/Spigot-Project%20Page-yellow.svg)](https://www.spigotmc.org/resources/nametagedit.3836/)
 [![JDK](https://img.shields.io/badge/JDK-1.8-blue.svg)](http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html)
 [![NametagEditAPI](https://img.shields.io/badge/NTE-Developer%20API-ff69b4.svg)](documentation/Developers.creole)
@@ -11,7 +11,7 @@ This plugin allows users to add up to 16 characters before and after their name.
 
 1.7.x to 1.12.x max 16 characters
 
-1.13.x to 1.15.x allows more than 16 characters. :)
+1.13.x to 1.16.x allows more than 16 characters. :)
 
 NametagEdit has support for EssentialsGroupManager, PermissionsEx, zPermissions, LuckPerms and LibsDisguises. If a user changes groups or permissions, their tag is automatically updated.
 

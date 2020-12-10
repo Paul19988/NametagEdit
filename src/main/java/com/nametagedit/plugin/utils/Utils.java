@@ -1,8 +1,8 @@
 package com.nametagedit.plugin.utils;
 
+import net.md_5.bungee.api.ChatColor;
 import org.apache.commons.lang.StringUtils;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.World;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
@@ -30,19 +30,17 @@ public class Utils {
     }
 
     public static String format(String input, boolean limitChars) {
-        String colored = ChatColor.translateAlternateColorCodes('&', input);
+        String colored = "";
+        colored = new HexText(input).translateColorCodes().parseHex().toString();
 
-        if(VersionChecker.getBukkitVersion() == BukkitVersion.v1_13_R1) {
-            return limitChars && colored.length() > 128 ? colored.substring(0, 128) : colored;
-        } else if(VersionChecker.getBukkitVersion() == BukkitVersion.v1_14_R1) {
-            return limitChars && colored.length() > 128 ? colored.substring(0, 128) : colored;
-        } else if(VersionChecker.getBukkitVersion() == BukkitVersion.v1_14_R2) {
-            return limitChars && colored.length() > 128 ? colored.substring(0, 128) : colored;
-        } else if(VersionChecker.getBukkitVersion() == BukkitVersion.v1_15_R1) {
-            return limitChars && colored.length() > 128 ? colored.substring(0, 128) : colored;
-        } else if(VersionChecker.getBukkitVersion() == BukkitVersion.v1_15_R2) {
-            return limitChars && colored.length() > 128 ? colored.substring(0, 128) : colored;
-        } else if(VersionChecker.getBukkitVersion() == BukkitVersion.v1_16_R1) {
+        if(VersionChecker.getBukkitVersion() == BukkitVersion.v1_13_R1
+                || VersionChecker.getBukkitVersion() == BukkitVersion.v1_14_R1
+                || VersionChecker.getBukkitVersion() == BukkitVersion.v1_14_R2
+                || VersionChecker.getBukkitVersion() == BukkitVersion.v1_15_R1
+                || VersionChecker.getBukkitVersion() == BukkitVersion.v1_15_R2
+                || VersionChecker.getBukkitVersion() == BukkitVersion.v1_16_R1
+                || VersionChecker.getBukkitVersion() == BukkitVersion.v1_16_R2
+                || VersionChecker.getBukkitVersion() == BukkitVersion.v1_16_R3) {
             return limitChars && colored.length() > 128 ? colored.substring(0, 128) : colored;
         } else {
             return limitChars && colored.length() > 16 ? colored.substring(0, 16) : colored;
